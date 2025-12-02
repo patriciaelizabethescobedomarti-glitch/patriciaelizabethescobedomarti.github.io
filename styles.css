@@ -1,0 +1,158 @@
+/* ------------------------
+   ESTILOS GENERALES
+------------------------ */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f6fdf8;
+    color: #2f3d2f;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+/* ------------------------
+   HEADER PARALLAX
+------------------------ */
+.parallax {
+    background-image: url('https://via.placeholder.com/1600x600?text=Ropa+Reciclada');
+    min-height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.parallax h1 {
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+.parallax .subtitulo {
+    font-size: 1.5em;
+    margin-top: 10px;
+    text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+}
+
+/* ------------------------
+   SECCIONES
+------------------------ */
+section {
+    margin: 50px auto;
+    max-width: 900px;
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.1);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+section:nth-of-type(1) { animation-delay: 0.2s; }
+section:nth-of-type(2) { animation-delay: 0.4s; }
+section:nth-of-type(3) { animation-delay: 0.6s; }
+section:nth-of-type(4) { animation-delay: 0.8s; }
+section:nth-of-type(5) { animation-delay: 1s; }
+section:nth-of-type(6) { animation-delay: 1.2s; }
+
+h2 {
+    color: #40916c;
+    border-left: 8px solid #74c69d;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+/* ------------------------
+   LISTAS Y BOTONES
+------------------------ */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    background: #d8f3dc;
+    padding: 14px 18px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    font-size: 1.1em;
+    border-left: 6px solid #52b788;
+    transition: all 0.3s ease;
+}
+
+ul li:hover {
+    background-color: #74c69d;
+    color: white;
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: #52b788;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #40916c;
+    transform: scale(1.05);
+}
+
+/* ------------------------
+   CARRUSEL DE IMÁGENES
+------------------------ */
+.carrusel .slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.carrusel .slider img {
+    width: 80%;
+    max-width: 800px;
+    border-radius: 15px;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.carrusel .slider img:hover {
+    transform: scale(1.05);
+}
+
+/* ------------------------
+   PIE DE PÁGINA
+------------------------ */
+footer {
+    text-align: center;
+    background: #40916c;
+    color: white;
+    padding: 20px;
+    font-size: 0.95em;
+}
+
+/* ------------------------
+   ANIMACIONES
+------------------------ */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
